@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7da00"
+    android:gravity="center"
+    android:padding="@dimen/padding"
+    tools:context="com.radiumdigital.meggnify.megg.MeggnifyActivity$CashFragment" >
+    
+    <ImageView
+        android:id="@+id/image" 
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="Image" />
+    
+    <LinearLayout 
+        android:id="@+id/cash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:layout_marginBottom="16dp"
+        android:padding="@dimen/padding"
+        android:orientation="vertical"
+        android:background="#ffffff">
+        
+        <TextView
+            android:id="@+id/harvest_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harvest Value ($00.00)"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+        
+        <TextView
+            android:id="@+id/consumed_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Consumed Value ($00.00)"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+<!-- From: file:/Users/tricipta/Google%20Drive/Projects/Android/Meggnify/app/src/main/res/layout/fragment_cash.xml -->

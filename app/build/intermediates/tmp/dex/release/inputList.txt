@@ -1,0 +1,7 @@
+/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/classes/release
+/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/pre-dexed/release/support-annotations-21.0.3-befe74b70c079607b8ef51b9fa0e8c72e516ae9a.jar
+/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/pre-dexed/release/internal_impl-21.0.3-ac108b72732a24cbfee742a7b386b99db5db2ad5.jar
+/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/pre-dexed/release/androidquery-6779e9bc3f52ee1c0522ad77d323922646790666.jar
+/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/pre-dexed/release/classes-73acf111c922584a317782244a66a29d76892bb2.jar
+/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/pre-dexed/release/classes-2ee699599afe45e18c213d4269beef2f2757cd55.jar
+/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/pre-dexed/release/classes-e81e3489261d6ad1d3e986c8016eda5b1e0bd5eb.jar

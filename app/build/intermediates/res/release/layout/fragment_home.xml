@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7da00"
+    android:gravity="center"
+    android:padding="@dimen/padding"
+    tools:context="com.radiumdigital.meggnify.megg.MeggnifyActivity$HomeFragment" >
+    
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello Megg,"
+        android:textSize="24sp"
+        android:layout_marginBottom="8dp" />
+    
+    <LinearLayout 
+        android:id="@+id/pending_assignment"
+        android:layout_below="@id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:orientation="vertical"
+        android:background="#a3cd25"
+        android:layout_marginBottom="8dp">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Number of pending assignments"
+            android:layout_marginBottom="8dp" />
+        
+        <TextView
+            android:id="@+id/pending_assignment_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You have 0 pending missions"
+            android:padding="8dp"
+            android:background="#fff" />
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/earliest_assignment"
+        android:layout_below="@id/pending_assignment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:orientation="vertical"
+        android:background="#a3cd25">
+        
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Earliest mission end time"
+            android:layout_marginBottom="8dp" />
+        
+        <TextView
+            android:id="@+id/earliest_assignment_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Your earliest assignment ends at 0"
+            android:padding="8dp"
+            android:background="#fff" />
+        
+    </LinearLayout>
+
+</RelativeLayout>
+<!-- From: file:/Users/tricipta/Google%20Drive/Projects/Android/Meggnify/app/src/main/res/layout/fragment_home.xml -->

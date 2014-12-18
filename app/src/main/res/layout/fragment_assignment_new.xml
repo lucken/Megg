@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7da00"
+    tools:context="com.radiumdigital.meggnify.megg.MeggnifyActivity$AssignmentMapFragment" >
+    
+    <GridView 
+        android:id="@+id/grid_mission"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:padding="@dimen/padding"
+        android:verticalSpacing="8dp"
+        android:horizontalSpacing="8dp"
+        android:scrollbarStyle="outsideOverlay" />
+
+</RelativeLayout>
