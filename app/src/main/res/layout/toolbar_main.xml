@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ToolBarStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:navigationIcon="@drawable/home"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:id="@+id/ToolbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp" >
+        <ImageView
+            android:id="@+id/ImgToolbar"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_home" />
+        <TextView
+            android:id="@+id/TvToolbarTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Home"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/TvToolbarTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textSize="16dp"/>
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>

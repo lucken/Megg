@@ -1,0 +1,59 @@
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffd701"
+    tools:context="com.meggnify.mission.GeneralSurveyActivity">
+
+    <LinearLayout
+        android:id="@+id/action_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/padding"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            style="?android:attr/progressBarStyleHorizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_alignParentLeft="true"
+                android:id="@+id/prev_button"
+                android:layout_width="100dp"
+                android:layout_height="42dp"
+                android:text="Prev"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:background="@drawable/btn_primary" />
+
+            <Button
+                android:layout_alignParentRight="true"
+                android:id="@+id/next_button"
+                android:layout_width="100dp"
+                android:layout_height="42dp"
+                android:text="Next"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:background="@drawable/btn_primary" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_above="@id/action_container"
+        android:id="@+id/task_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

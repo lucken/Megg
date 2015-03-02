@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffd701"
+    tools:context="com.meggnify.mission.AudioActivity" >
+
+    <LinearLayout
+        android:id="@+id/action_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/padding"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            style="?android:attr/progressBarStyleHorizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/done_button"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:text="Done"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:background="#a4c739" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/action_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding"
+        android:scrollbarStyle="outsideOverlay">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="Task Detail" />
+
+            <TextView
+                android:id="@+id/task_question_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:text="Question Type" />
+
+            <ImageButton
+                android:id="@+id/task_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                android:layout_gravity="center"
+                android:contentDescription="Icon" />
+
+            <LinearLayout
+                android:id="@+id/question_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:padding="@dimen/padding"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/task_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+                <VideoView
+                    android:id="@+id/task_audio"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <Button
+                    android:id="@+id/take_audio_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Take Audio"
+                    android:textColor="#ffffff"
+                    android:textSize="12sp"
+                    android:background="#a4c739"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
