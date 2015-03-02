@@ -2,19 +2,16 @@ package com.meggnify.main;
 
 import com.meggnify.MeggnifyManager;
 import com.meggnify.R;
-import com.meggnify.auth.AuthActivity;
 import com.meggnify.helper.API;
+import com.meggnify.helper.BaseActivity;
 import com.meggnify.helper.Constants;
 import com.meggnify.helper.Util;
 import com.meggnify.helper.so;
 import com.meggnify.lib.LocalContext;
-import com.raaf.rDialog;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Message;
 import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
@@ -22,7 +19,6 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.KeyEvent;
 import android.view.MenuItem;
-import android.view.View;
 
 public class MeggnifyActivity extends BaseActivity implements DrawerFragment.DrawerCallback, IMainListener {
 
@@ -91,7 +87,10 @@ public class MeggnifyActivity extends BaseActivity implements DrawerFragment.Dra
     @Override
     public void onDrawerItemSelected(int position) {
         FragmentManager fragmentManager = getSupportFragmentManager();
-
+        if (position==1){
+            if (so.onMission)
+                position = 6;
+        }
         switch (position) {
             case 0:
                 fragment = new HomeFragment();
@@ -110,6 +109,9 @@ public class MeggnifyActivity extends BaseActivity implements DrawerFragment.Dra
                 break;
             case 5:
                 fragment = new CashSuccessFragment();
+                break;
+            case 6:
+                fragment = new MissionFragment();
                 break;
             default:
                 fragment = new HomeFragment();
@@ -139,6 +141,7 @@ public class MeggnifyActivity extends BaseActivity implements DrawerFragment.Dra
                 mTitle = "Home";
                 break;
             case 1:
+            case 6:
                 mTitle = "Assignment";
                 break;
             case 2:

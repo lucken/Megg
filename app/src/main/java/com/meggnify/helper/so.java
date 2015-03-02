@@ -10,9 +10,12 @@ public class so {
 
     static ArrayList<Assignment> myAssignments;
     static ArrayList<Assignment> newAssignments;
+    public static Assignment currentAssignment;
     public static ArrayList myRunMission;
     public static Result result;
+    public static Boolean onMission = false;
     static User user;
+
 
     public static ArrayList<Assignment> getAssignments() {
         if (myAssignments == null)

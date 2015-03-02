@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 
 import com.meggnify.R;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -23,6 +24,7 @@ public class Assignment {
     String assignment_type;
     Date date_start;
     Date date_end;
+    ArrayList<Question> questions = new ArrayList<Question>();
 
     public int getId() {
         return id;
@@ -141,5 +143,13 @@ public class Assignment {
         else
             return R.drawable.ic_mystery_audit_dark;
 
+    }
+
+    public ArrayList<Question> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(ArrayList<Question> questions) {
+        this.questions = questions;
     }
 }

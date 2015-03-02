@@ -3,35 +3,26 @@ package com.meggnify.main;
 import com.meggnify.MeggnifyManager;
 import com.meggnify.R;
 import com.meggnify.helper.API;
+import com.meggnify.helper.BaseFragment;
 import com.meggnify.helper.Constants;
 import com.meggnify.helper.Util;
 import com.meggnify.helper.so;
-import com.meggnify.mission.GeneralSurveyActivity;
-import com.meggnify.mission.MysteryAuditActivity;
 import com.meggnify.model.Assignment;
-import com.meggnify.model.Mission;
-import com.raaf.rDate;
 import com.raaf.rDialog;
 
-import android.accounts.AccountManager;
 import android.app.Activity;
-import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class AssignmentMissionFragment extends BaseFragment {
 
@@ -114,6 +105,9 @@ public class AssignmentMissionFragment extends BaseFragment {
             rDialog.SetToast(getActivity(), "Start Assignment");
             //API.MegApplyJob(mUserToken, so.getAssignments().get(pos).getId(), handler);
             //rDialog.ShowProgressDialog(getActivity(), "Accept Assignment", "please wait", true);
+            so.currentAssignment = ass;
+            so.onMission = true;
+            ((MeggnifyActivity)getActivity()).ChangeModule(6);
         }
     };
 
@@ -135,6 +129,7 @@ public class AssignmentMissionFragment extends BaseFragment {
                 API.MegMyJob(Util.getToken(getActivity()), handler);
             } else if (so.result.getModul() == Constants.modul_assignment && so.result.getMode() == 3) {
                 //start mission
+
             } else if (so.result.getModul() == Constants.modul_meggnets && so.result.getMode() == 2) {
                 //back to my job
                 ((MeggnifyActivity) getActivity()).AssignmentSelectItem(0);

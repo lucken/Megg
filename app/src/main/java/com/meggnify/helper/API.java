@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 
+import com.meggnify.model.Answer;
 import com.meggnify.model.Assignment;
+import com.meggnify.model.Question;
 import com.meggnify.model.Result;
 import com.raaf.http.rLoader;
 import com.raaf.rDate;
@@ -75,7 +77,39 @@ public class API {
                                     }
                                 }
                                 break;
-                            case 2:
+                            case 2://locations
+                                break;
+                            case 3://start mission
+                                break;
+                            case 4://get questions
+                                jo = jo.getJSONObject("assignment");
+                                so.currentAssignment.setName(jo.getString("name"));
+                                so.currentAssignment.setObjective(jo.getString("objective"));
+                                so.currentAssignment.setInstruction(jo.getString("instruction"));
+                                jar = jo.getJSONArray("questions");
+                                if (jar.length() > 0) {
+                                    for (int i = 0; i < jar.length(); i++) {
+                                        jo = jar.getJSONObject(i);
+                                        Question q = new Question();
+                                        q.setQuestion(jo.getString("question"));
+                                        q.setQuestion_type(jo.getString("question_type"));
+                                        q.setAnswer_type(jo.getString("answer_type"));
+                                        JSONArray jar1 = jo.getJSONArray("answers");
+                                        if (jar.length() > 0) {
+                                            for (int j = 0; j < jar1.length(); j++) {
+                                                jo = jar1.getJSONObject(j);
+                                                Answer a = new Answer();
+                                                a.setAnswer(jo.getString("answer"));
+                                                a.setMove_to(jo.getString("move_to"));
+                                                if (jo.has("is_other"))
+                                                    a.setIs_other(jo.getBoolean("is_other"));
+                                                a.setType_answer(jo.getString("type_answer"));
+                                                q.getAnswers().add(a);
+                                            }
+                                        }
+                                        so.currentAssignment.getQuestions().add(q);
+                                    }
+                                }
                                 break;
                         }
                         break;

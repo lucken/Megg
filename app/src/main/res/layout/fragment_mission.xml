@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffd701"
-    tools:context="com.meggnify.mission.MissionActivity$MissionFragment" >
-    
+    android:background="@color/orange"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="4dp"
+    tools:context="com.meggnify.main.AssignmentFragment">
+
+    <TextView
+        android:id="@+id/TvAssignmentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="Jobs"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white" />
+    <FrameLayout
+        android:id="@+id/mission_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
 
-</RelativeLayout>
+
+</LinearLayout>

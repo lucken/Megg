@@ -2,7 +2,7 @@
 // Jad home page: http://www.geocities.com/kpdus/jad.html
 // Decompiler options: braces fieldsfirst space lnc 
 
-package com.meggnify.main;
+package com.meggnify.helper;
 
 import android.content.Intent;
 import android.content.SharedPreferences;

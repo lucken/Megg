@@ -1,11 +1,9 @@
-package com.meggnify.main;
+package com.meggnify.helper;
 
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 
-import com.meggnify.helper.API;
-import com.meggnify.helper.so;
 import com.raaf.rDialog;
 
 /**

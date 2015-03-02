@@ -6,68 +6,53 @@ package com.meggnify.model;
 
 import java.util.ArrayList;
 
-public class Question
-{
+public class Question {
 
     String answer_type;
-    ArrayList answers;
+    ArrayList<Answer> answers = new ArrayList<Answer>();
     int id;
     String question;
     String question_type;
 
-    public Question()
-    {
-        ArrayList arraylist = new ArrayList();
-        answers = arraylist;
-    }
-
-    public String getAnswer_type()
-    {
+    public String getAnswer_type() {
         return answer_type;
     }
 
-    public ArrayList getAnswers()
-    {
-        return answers;
-    }
-
-    public int getId()
-    {
+    public int getId() {
         return id;
     }
 
-    public String getQuestion()
-    {
+    public String getQuestion() {
         return question;
     }
 
-    public String getQuestion_type()
-    {
+    public String getQuestion_type() {
         return question_type;
     }
 
-    public void setAnswer_type(String s)
-    {
+    public void setAnswer_type(String s) {
         answer_type = s;
     }
 
-    public void setAnswers(ArrayList arraylist)
-    {
-        answers = arraylist;
-    }
 
-    public void setId(int i)
-    {
+    public void setId(int i) {
         id = i;
     }
 
-    public void setQuestion(String s)
-    {
+    public void setQuestion(String s) {
         question = s;
     }
 
-    public void setQuestion_type(String s)
-    {
+    public void setQuestion_type(String s) {
         question_type = s;
+    }
+
+
+    public ArrayList<Answer> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(ArrayList<Answer> answers) {
+        this.answers = answers;
     }
 }

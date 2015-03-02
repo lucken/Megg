@@ -16,6 +16,11 @@
         android:verticalSpacing="8dp"
         android:horizontalSpacing="8dp"
         android:scrollbarStyle="outsideOverlay" />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressbar"
+        android:layout_centerInParent="true" />
     <TextView
         android:id="@+id/empty"
         android:layout_width="wrap_content"
@@ -23,11 +28,6 @@
         android:layout_centerInParent="true"
         android:text="loading jobs"/>
 
-    <ProgressBar
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/progressbar"
-        android:layout_centerInParent="true" />
+
 
 </RelativeLayout>
