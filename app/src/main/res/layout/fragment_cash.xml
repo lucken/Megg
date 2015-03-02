@@ -3,44 +3,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f7da00"
-    android:gravity="center"
+    android:background="#ffd701"
     android:padding="@dimen/padding"
-    tools:context="com.radiumdigital.meggnify.megg.MeggnifyActivity$CashFragment" >
-    
-    <ImageView
-        android:id="@+id/image" 
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="16dp"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="Image" />
-    
-    <LinearLayout 
-        android:id="@+id/cash"
+    tools:context="com.meggnify.main.CashFragment">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/image"
-        android:layout_marginBottom="16dp"
-        android:padding="@dimen/padding"
-        android:orientation="vertical"
-        android:background="#ffffff">
-        
-        <TextView
-            android:id="@+id/harvest_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Harvest Value ($00.00)"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp" />
-        
-        <TextView
-            android:id="@+id/consumed_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Consumed Value ($00.00)"
-            android:textSize="18sp" />
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
 
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="32dp"
+            android:contentDescription="Image"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cash" />
+
+        <LinearLayout
+            android:id="@+id/cash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image"
+            android:background="@drawable/bg_container"
+            android:orientation="vertical"
+            android:padding="@dimen/padding">
+
+            <TextView
+                android:id="@+id/cash_harvest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/cash_consumed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Choose your prefered payout method :"
+                android:textColor="@color/black"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/BtCashPaypall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/btn_dark"
+                android:text="Paypall"
+                android:textColor="@color/white"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/BtCashBank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_dark"
+                android:text="Bank Account"
+                android:textColor="@color/white"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ImgCash"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/btn_primary"
+            android:src="@drawable/ic_cash_out" />
     </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleLargeInverse"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -3,13 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
-    tools:context="com.radiumdigital.meggnify.megg.MeggnifyActivity$DrawerFragment" >
+    android:background="#00000000"
+    tools:context="com.meggnify.main.DrawerFragment" >
     
     <ListView
+        android:layout_marginTop="90dp"
         android:id="@+id/list_menu"
+        android:background="@drawable/bg_menu"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:choiceMode="singleChoice" />
 
 </RelativeLayout>

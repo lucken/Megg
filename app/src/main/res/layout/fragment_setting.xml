@@ -3,82 +3,110 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f7da00"
+    android:background="#ffd701"
     android:gravity="center"
     android:padding="@dimen/padding"
-    tools:context="com.radiumdigital.meggnify.megg.MeggnifyActivity$SettingFragment" >
-    
+    tools:context="com.meggnify.main.SettingFragment">
+
     <ImageView
-        android:id="@+id/image" 
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:layout_marginBottom="16dp"
+        android:id="@+id/image"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
         android:layout_centerHorizontal="true"
-        android:contentDescription="Image" />
-    
-    <LinearLayout 
-        android:layout_below="@id/image"
+        android:layout_marginBottom="32dp"
+        android:contentDescription="Image"
+        android:scaleType="fitCenter"
+        android:src="@drawable/setting" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/padding"
+        android:layout_below="@id/image"
+        android:background="@drawable/bg_container"
         android:orientation="vertical"
-        android:background="#ffffff">
-        
-        <TextView 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Notifications"
-            android:layout_marginBottom="8dp" />
-        
-        <LinearLayout 
+        android:padding="@dimen/padding">
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:padding="8dp"
+            android:text="Notifications" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
             android:background="#000000"
-            android:orientation="vertical" >
-            
-            <TextView 
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ringer"
-                android:textColor="#ffffff"
-                android:textSize="16sp"
-                android:layout_marginBottom="4dp" />
-            
-            <TextView 
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Ringer"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <Switch
+                    android:id="@+id/SwRinger"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Audio alert on incoming new assignments"
                 android:textColor="#ffffff"
                 android:textSize="12sp" />
-            
+
         </LinearLayout>
-        
-        <LinearLayout 
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
             android:background="#000000"
-            android:orientation="vertical" >
-            
-            <TextView 
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Popup Screen"
-                android:textColor="#ffffff"
-                android:textSize="16sp"
-                android:layout_marginBottom="4dp" />
-            
-            <TextView 
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Popup Screen"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp" />
+
+                <Switch
+                    android:id="@+id/SwPopup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Visual alert on incoming new assignments"
                 android:textColor="#ffffff"
                 android:textSize="12sp" />
-            
+
         </LinearLayout>
-        
+
     </LinearLayout>
 
 </RelativeLayout>

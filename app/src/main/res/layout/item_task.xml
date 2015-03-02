@@ -4,10 +4,22 @@
     android:layout_height="match_parent"
     android:padding="@dimen/padding"
     android:background="#ffffff" >
-    
+
+    <ImageView
+        android:id="@+id/task_icon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/ic_general_survey"
+        android:scaleType="fitCenter"
+        android:contentDescription="Icon" />
+
     <TextView
-        android:id="@+id/task_title"
+        android:id="@+id/task_question"
+        android:layout_toRightOf="@id/task_icon"
+        android:layout_marginLeft="8dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Lorem ipsum" />
 
 </RelativeLayout>

@@ -4,8 +4,8 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffd500"
-    tools:context="com.radiumdigital.meggnify.mission.MissionActivity" >
+    android:background="#ffd701"
+    tools:context="com.meggnify.mission.MissionActivity" >
     
 
 </FrameLayout>

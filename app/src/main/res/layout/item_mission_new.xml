@@ -4,12 +4,14 @@
     android:layout_height="match_parent"
     android:layout_margin="8dp"
     android:padding="@dimen/padding"
-    android:background="#00a3cb" >
+    android:background="@drawable/bg_item_new_jobs" >
     
     <ImageView
         android:id="@+id/mission_icon"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_mystery_audit"
+        android:scaleType="fitCenter"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="8dp"
         android:contentDescription="Icon" />
@@ -21,6 +23,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Lorem ipsum"
+        android:singleLine="true"
         android:textColor="#ffffff" />
 
 </RelativeLayout>

@@ -2,12 +2,9 @@
 <resources>
 
     <string name="app_name">Meggnify</string>
-    
     <string name="action_settings">Settings</string>
-    
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    
     <string name="mission_id">Id</string>
     <string name="mission_name">Name</string>
     <string name="mission_objective">Objective</string>
@@ -18,16 +15,17 @@
     <string name="mission_location">Location</string>
     <string name="mission_cost">Cost</string>
     <string name="mission_icon">Icon</string>
-    
     <string name="task_id">Id</string>
     <string name="task_title">Title</string>
     <string name="task_question">Question</string>
     <string name="task_type">Type</string>
     <string name="task_answer_type">Answer Type</string>
-    
     <string name="profile_id">Id</string>
     <string name="profile_title">Title</string>
     <string name="profile_info">Info</string>
     <string name="profile_icon">Icon</string>
-
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="no_record">No Record Found</string>
 </resources>

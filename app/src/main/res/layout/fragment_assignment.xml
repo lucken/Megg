@@ -1,57 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f7da00"
-    tools:context="com.radiumdigital.meggnify.megg.MeggnifyActivity$AssignmentFragment" >
-    
-    <LinearLayout 
-        android:id="@+id/action"
-        android:layout_alignParentBottom="true"
+    android:background="@color/orange"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="4dp"
+    tools:context="com.meggnify.main.AssignmentFragment">
+
+    <TextView
+        android:id="@+id/TvAssignmentTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="@dimen/padding">
-        
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="Jobs"
+        android:textColor="@color/white" />
+    <FrameLayout
+        android:id="@+id/assignment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+    <LinearLayout
+        android:id="@+id/action_container"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/button_my_job"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="84dp"
             android:layout_weight="1"
+            android:background="@drawable/btn_my_jobs"
+            android:drawableTop="@drawable/ic_my_jobs"
+            android:padding="8dp"
             android:text="My Jobs"
             android:textColor="#ffffff"
-            android:textSize="14sp"
-            android:background="#9a62b3" />
-        
+            android:textSize="14sp" />
+
         <Button
             android:id="@+id/button_new_job"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="84dp"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_new_jobs"
+            android:drawableTop="@drawable/ic_new_jobs"
+            android:padding="8dp"
             android:text="New Jobs"
             android:textColor="#ffffff"
-            android:textSize="14sp"
-            android:background="#00a3cb" />
-        
+            android:textSize="14sp" />
+
         <Button
             android:id="@+id/button_map"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="84dp"
             android:layout_weight="1"
+            android:background="@drawable/btn_map"
+            android:drawableTop="@drawable/ic_map"
+            android:padding="8dp"
             android:text="Map"
             android:textColor="#ffffff"
-            android:textSize="14sp"
-            android:background="#e76297" />
-        
-    </LinearLayout>
-    
-    <FrameLayout
-        android:id="@+id/assignment_container"
-        android:layout_above="@id/action"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+            android:textSize="14sp" />
 
-</RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

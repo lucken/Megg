@@ -4,19 +4,33 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f7da00"
-    tools:context="com.radiumdigital.meggnify.megg.MeggnifyActivity" >
-    
-    <FrameLayout
-        android:id="@+id/container"
+    android:background="#ffd701"
+    tools:context="com.meggnify.main.MeggnifyActivity">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-    
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/toolbar_main"
+            android:layout_marginLeft="-18dp"/>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
     <fragment
         android:id="@+id/fragment_drawer"
-        android:name="com.radiumdigital.meggnify.megg.DrawerFragment"
+        android:name="com.meggnify.main.DrawerFragment"
         android:layout_width="@dimen/drawer_width"
         android:layout_height="match_parent"
-        android:layout_gravity="start" />
+        android:layout_gravity="start"
+        tools:layout="@layout/fragment_drawer" />
 
 </android.support.v4.widget.DrawerLayout>

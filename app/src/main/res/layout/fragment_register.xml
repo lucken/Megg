@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f7da00"
+    android:background="#ffd701"
     android:gravity="center"
     tools:context="com.radiumdigital.meggnify.RegisterActivity$RegisterFragment" >
     
@@ -23,7 +23,9 @@
             android:id="@+id/id_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:background="#ffffff"
+            android:padding="8dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -35,7 +37,9 @@
             android:id="@+id/first_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:background="#ffffff"
+            android:padding="8dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -47,7 +51,9 @@
             android:id="@+id/last_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:background="#ffffff"
+            android:padding="8dp"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -59,7 +65,9 @@
             android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:background="#ffffff"
+            android:padding="8dp"/>
         
         <TextView
             android:layout_width="match_parent"
@@ -71,7 +79,9 @@
             android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="8dp"
+            android:background="#ffffff"
+            android:padding="8dp"/>
         
         <TextView
             android:layout_width="match_parent"
@@ -83,28 +93,32 @@
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="8dp"
+            android:background="#ffffff"
+            android:padding="8dp"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Password Confirmation"
-            android:layout_marginBottom="8dp" />
+            android:layout_marginBottom="4dp" />
         
         <EditText
             android:id="@+id/password_confirm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginBottom="32dp"
+            android:background="#ffffff"
+            android:padding="8dp"/>
         
         <Button 
             android:id="@+id/button_submit"
             android:layout_width="match_parent"
-            android:layout_height="36dp"
+            android:layout_height="42dp"
             android:text="Submit"
             android:textColor="#ffffff"
             android:textSize="14sp"
-            android:background="#a3cd25" />
+            android:background="@drawable/btn_primary" />
         
     </LinearLayout>
 

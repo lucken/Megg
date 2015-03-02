@@ -1,7 +1,8 @@
-/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/classes/release
-/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/pre-dexed/release/support-annotations-21.0.3-befe74b70c079607b8ef51b9fa0e8c72e516ae9a.jar
-/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/pre-dexed/release/internal_impl-21.0.3-ac108b72732a24cbfee742a7b386b99db5db2ad5.jar
-/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/pre-dexed/release/androidquery-6779e9bc3f52ee1c0522ad77d323922646790666.jar
-/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/pre-dexed/release/classes-73acf111c922584a317782244a66a29d76892bb2.jar
-/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/pre-dexed/release/classes-2ee699599afe45e18c213d4269beef2f2757cd55.jar
-/Users/tricipta/Google Drive/Projects/Android/Meggnify/app/build/intermediates/pre-dexed/release/classes-e81e3489261d6ad1d3e986c8016eda5b1e0bd5eb.jar
+C:\Users\Luqman Hakim\Documents\project\2015\Meggnify\Meggnify\app\build\intermediates\classes\release
+C:\Users\Luqman Hakim\Documents\project\2015\Meggnify\Meggnify\app\build\intermediates\pre-dexed\release\support-annotations-21.0.3-909893ea68eaf2b3ba4fa945f79aa50a1e523f08.jar
+C:\Users\Luqman Hakim\Documents\project\2015\Meggnify\Meggnify\app\build\intermediates\pre-dexed\release\internal_impl-21.0.3-999a41b88187f09afe7eb993df9ec82147ed1f07.jar
+C:\Users\Luqman Hakim\Documents\project\2015\Meggnify\Meggnify\app\build\intermediates\pre-dexed\release\androidquery-b8b5bd336aed341c1e2b024c8c2359ff3d6d10a2.jar
+C:\Users\Luqman Hakim\Documents\project\2015\Meggnify\Meggnify\app\build\intermediates\pre-dexed\release\classes-c0fc475641ce4f00622c740a7d9e860f0aa9b75c.jar
+C:\Users\Luqman Hakim\Documents\project\2015\Meggnify\Meggnify\app\build\intermediates\pre-dexed\release\classes-3e52c02637c855722ab12f63c612e233760b7168.jar
+C:\Users\Luqman Hakim\Documents\project\2015\Meggnify\Meggnify\app\build\intermediates\pre-dexed\release\raaf-9b9c575df90ca0d6c718433422b52d9e50f52f11.jar
+C:\Users\Luqman Hakim\Documents\project\2015\Meggnify\Meggnify\app\build\intermediates\pre-dexed\release\classes-e33666264d705993a5203ea838b0542872fc6d8b.jar

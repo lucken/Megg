@@ -3,68 +3,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#f7da00"
-    android:gravity="center"
+    android:background="#ffd701"
     android:padding="@dimen/padding"
-    tools:context="com.radiumdigital.meggnify.megg.MeggnifyActivity$HomeFragment" >
-    
-    <TextView
-        android:id="@+id/welcome"
+    tools:context="com.meggnify.main.HomeFragment" >
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello Megg,"
-        android:textSize="24sp"
-        android:layout_marginBottom="8dp" />
-    
-    <LinearLayout 
-        android:id="@+id/pending_assignment"
-        android:layout_below="@id/welcome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/padding"
-        android:orientation="vertical"
-        android:background="#a3cd25"
-        android:layout_marginBottom="8dp">
-        
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
         <TextView
+            android:id="@+id/welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Number of pending assignments"
-            android:layout_marginBottom="8dp" />
-        
-        <TextView
-            android:id="@+id/pending_assignment_text"
+            android:layout_marginBottom="16dp"
+            android:text="Hello,"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/pending_assignment"
+            android:layout_below="@id/welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="You have 0 pending missions"
-            android:padding="8dp"
-            android:background="#fff" />
-        
+            android:layout_marginBottom="16dp"
+            android:padding="@dimen/padding"
+            android:orientation="vertical"
+            android:background="@drawable/bg_container_home">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Number of pending assignments"/>
+
+            <TextView
+                android:id="@+id/assignment_pending"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:background="@drawable/bg_container" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/earliest_assignment"
+            android:layout_below="@id/pending_assignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding"
+            android:orientation="vertical"
+            android:background="@drawable/bg_container_home">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Earliest mission end time" />
+
+            <TextView
+                android:id="@+id/assignment_earliest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:lines="2"
+                android:background="@drawable/bg_container" />
+
+        </LinearLayout>
+
     </LinearLayout>
-    
-    <LinearLayout 
-        android:id="@+id/earliest_assignment"
-        android:layout_below="@id/pending_assignment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/padding"
-        android:orientation="vertical"
-        android:background="#a3cd25">
-        
-        <TextView 
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Earliest mission end time"
-            android:layout_marginBottom="8dp" />
-        
-        <TextView
-            android:id="@+id/earliest_assignment_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Your earliest assignment ends at 0"
-            android:padding="8dp"
-            android:background="#fff" />
-        
-    </LinearLayout>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/progressbar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
