@@ -29,7 +29,7 @@ public class MeggnifyActivity extends BaseActivity implements DrawerFragment.Dra
     private String mUserToken;
 
     private DrawerFragment drawerFragment;
-
+int last_position=0;
     private CharSequence mTitle;
     Fragment fragment = null;
     @Override
@@ -117,7 +117,7 @@ public class MeggnifyActivity extends BaseActivity implements DrawerFragment.Dra
                 fragment = new HomeFragment();
                 break;
         }
-
+        last_position=position;
         Bundle extras = new Bundle();
         extras.putString("token", mUserToken);
         fragment.setArguments(extras);
@@ -165,9 +165,15 @@ public class MeggnifyActivity extends BaseActivity implements DrawerFragment.Dra
     public void onBackPressed() {
         if (drawerFragment.isDrawerOpen())
             drawerFragment.closeDrawer();
-        else
+        else {
+            if (last_position==6){
+                if (((MissionFragment)fragment).last_position>0)
+                    MissionSelectItem(0);
+                else
+                    super.onBackPressed();
+            }else
             super.onBackPressed();
-
+        }
         return;
     }
 
@@ -190,6 +196,16 @@ public class MeggnifyActivity extends BaseActivity implements DrawerFragment.Dra
     public void AssignmentSetTitle(String s)
     {
         ((AssignmentFragment)fragment).SetTitle(s);
+    }
+
+    public void MissionSelectItem(int i)
+    {
+        ((MissionFragment)fragment).selectItem(i);
+    }
+
+    public void MissionSetTitle(String s)
+    {
+        ((MissionFragment)fragment).setTitle(s);
     }
 
     public void ChangeModule(int i)

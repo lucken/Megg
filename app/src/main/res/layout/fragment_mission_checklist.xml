@@ -50,10 +50,12 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:divider="@color/black"
+        android:padding="16dp"
         android:dividerHeight="1dp"
         android:background="@drawable/bg_container_mission"
         android:scrollbarStyle="outsideOverlay" />
     <Button
+        android:id="@+id/BtSubmit"
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

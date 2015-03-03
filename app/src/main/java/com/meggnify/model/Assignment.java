@@ -25,7 +25,7 @@ public class Assignment {
     Date date_start;
     Date date_end;
     ArrayList<Question> questions = new ArrayList<Question>();
-
+int current_question = 0;
     public int getId() {
         return id;
     }
@@ -151,5 +151,13 @@ public class Assignment {
 
     public void setQuestions(ArrayList<Question> questions) {
         this.questions = questions;
+    }
+
+    public int getCurrent_question() {
+        return current_question;
+    }
+
+    public void setCurrent_question(int current_question) {
+        this.current_question = current_question;
     }
 }

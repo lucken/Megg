@@ -18,6 +18,7 @@ import com.meggnify.helper.so;
  */
 public class MissionFragment extends BaseFragment {
     private TextView TvAssignmentTitle;
+    public int last_position = 0;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class MissionFragment extends BaseFragment {
         selectItem(0);
     }
 
-    void selectItem(int position) {
+    public void selectItem(int position) {
         Fragment fragment;
         switch (position) {
             case 0:
@@ -41,18 +42,23 @@ public class MissionFragment extends BaseFragment {
                 TvAssignmentTitle.setText("Start Mission - " + so.currentAssignment.getAssignment_type() + " - Checklist");
                 break;
             case 1:
-                fragment = new AssignmentMapFragment();
-                TvAssignmentTitle.setText("Map");
+                fragment = new MissionQuestionFragment();
+                TvAssignmentTitle.setText("Start Mission - " + so.currentAssignment.getAssignment_type() + " - Question");
                 break;
             default:
                 fragment = new AssignmentMyFragment();
                 TvAssignmentTitle.setText("My Jobs");
                 break;
         }
-
+        last_position = position;
 
         getActivity().getSupportFragmentManager().beginTransaction()
                 .replace(R.id.mission_container, fragment)
                 .commit();
     }
+
+    public void setTitle(String title){
+        TvAssignmentTitle.setText(title);
+    }
+
 }

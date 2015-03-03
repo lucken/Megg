@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -30,11 +32,18 @@ import java.util.ArrayList;
 public class MissionChecklistFragment extends BaseFragment {
     private QuestionAdapter missionAdapter;
     private ListView questionList;
+    private TextView TvMissionInstruction;
+    private Button BtSubmit;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_mission_checklist, container, false);
+
+        TvMissionInstruction = (TextView) view.findViewById(R.id.TvMissionInstruction);
         questionList = (ListView) view.findViewById(R.id.ListMissionQuestion);
+        BtSubmit= (Button) view.findViewById(R.id.BtSubmit);
         missionAdapter = new QuestionAdapter(getActivity(), so.currentAssignment.getQuestions());
         questionList.setAdapter(missionAdapter);
         questionList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -43,7 +52,20 @@ public class MissionChecklistFragment extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position,
                                     long id) {
                 // TODO Auto-generated method stub
-               // selectItem(position);
+                so.currentAssignment.setCurrent_question(position);
+                ((MeggnifyActivity)getActivity()).MissionSelectItem(1);
+            }
+        });
+        BtSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Boolean found = false;
+                for (int i = 0; i < so.currentAssignment.getQuestions().size(); i++) {
+                    if (!so.currentAssignment.getQuestions().get(i).getIs_answered())
+                        found  = true;
+                }
+                if (found)
+                    rDialog.SetToast(getActivity(),"please answer all questions before submit");
             }
         });
         return view;
@@ -52,15 +74,19 @@ public class MissionChecklistFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
-        if (so.currentAssignment.getQuestions().size() == 0)
+        if (so.currentAssignment.getQuestions().size() == 0) {
             API.AssQuest(Util.getToken(getActivity()), so.currentAssignment.getId(), handler);
+            rDialog.ShowProgressDialog(getActivity(),"loading questions","please wait",true);
+        }
+        TvMissionInstruction.setText(so.currentAssignment.getObjective());
     }
 
     @Override
     protected void onHandlerResponse(Message msg) {
         super.onHandlerResponse(msg);
-        rDialog.SetToast(getActivity(), so.result.getInfo());
+       // rDialog.SetToast(getActivity(), so.result.getInfo());
         missionAdapter.notifyDataSetChanged();
+        rDialog.CloseProgressDialog();
     }
 
     private static class ViewHolder {
@@ -117,7 +143,23 @@ public class MissionChecklistFragment extends BaseFragment {
             Question q = (Question) getItem(position);
             if (q != null) {
                 holder.TvQuestion.setText(q.getQuestion());
-                holder.ImgIcon.setImageResource(R.drawable.ic_mystery_audit);
+                switch (q.getAnswer_type()) {
+                    case "Video":
+                        holder.ImgIcon.setImageResource(R.drawable.ic_video);
+                        break;
+                    case "Photo":
+                        holder.ImgIcon.setImageResource(R.drawable.ic_camera);
+                        break;
+                    case "Audio":
+                        holder.ImgIcon.setImageResource(R.drawable.ic_audio);
+                        break;
+                    case "Price Check":
+                        holder.ImgIcon.setImageResource(R.drawable.ic_price);
+                        break;
+                    default:
+                        holder.ImgIcon.setImageResource(R.drawable.ic_question);
+                        break;
+                }
 
 
             }

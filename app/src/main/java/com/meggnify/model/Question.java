@@ -13,7 +13,7 @@ public class Question {
     int id;
     String question;
     String question_type;
-
+    Boolean is_answered=false;
     public String getAnswer_type() {
         return answer_type;
     }
@@ -55,4 +55,13 @@ public class Question {
     public void setAnswers(ArrayList<Answer> answers) {
         this.answers = answers;
     }
+
+    public Boolean getIs_answered() {
+        return is_answered;
+    }
+
+    public void setIs_answered(Boolean is_answered) {
+        this.is_answered = is_answered;
+    }
+
 }

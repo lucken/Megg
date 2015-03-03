@@ -91,6 +91,7 @@ public class API {
                                     for (int i = 0; i < jar.length(); i++) {
                                         jo = jar.getJSONObject(i);
                                         Question q = new Question();
+                                        q.setId(jo.getInt("id"));
                                         q.setQuestion(jo.getString("question"));
                                         q.setQuestion_type(jo.getString("question_type"));
                                         q.setAnswer_type(jo.getString("answer_type"));
@@ -99,6 +100,7 @@ public class API {
                                             for (int j = 0; j < jar1.length(); j++) {
                                                 jo = jar1.getJSONObject(j);
                                                 Answer a = new Answer();
+                                                a.setId(jo.getInt("id"));
                                                 a.setAnswer(jo.getString("answer"));
                                                 a.setMove_to(jo.getString("move_to"));
                                                 if (jo.has("is_other"))
